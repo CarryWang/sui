@@ -162,8 +162,8 @@ module std::vector {
 
     /// Create a vector of length `n` by calling the function `f` on each index.
     public macro fun tabulate<$T>($n: u64, $f: |u64| -> $T): vector<$T> {
-        let mut v = vector[];
         let n = $n;
+        let mut v = vector[];
         n.do!(|i| v.push_back($f(i)));
         v
     }

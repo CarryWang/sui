@@ -273,7 +273,7 @@ module std::vector {
         }
     }
 
-    /// Zip two vectors `v1` and `v2` by applying the function `f` to each pair of elements.
+    /// Destroys two vectors `v1` and `v2` by calling `f` to each pair of elements.
     /// Consumes both vectors.
     /// The order of elements in the vectors is preserved.
     public macro fun zip_do<$T1, $T2>($v1: vector<$T1>, $v2: vector<$T2>, $f: |$T1, $T2|) {
